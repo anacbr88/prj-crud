@@ -51,6 +51,7 @@ namespace PrjCrud.Controllers
         {
             if (ModelState.IsValid)
             {
+                usuario.Senha = SecurityPasswd.GenerateSHA256String(usuario.Senha);
                 db.Usuarios.Add(usuario);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -83,6 +84,7 @@ namespace PrjCrud.Controllers
         {
             if (ModelState.IsValid)
             {
+                usuario.Senha = SecurityPasswd.GenerateSHA256String(usuario.Senha);
                 db.Entry(usuario).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");

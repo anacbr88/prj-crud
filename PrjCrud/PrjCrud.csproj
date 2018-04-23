@@ -153,6 +153,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
+    <Compile Include="DAL\SecurityPasswd.cs" />
     <Compile Include="DAL\UsuarioContext.cs" />
     <Compile Include="DAL\UsuarioInitializer.cs" />
     <Compile Include="Global.asax.cs">
