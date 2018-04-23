@@ -22,6 +22,7 @@ namespace PrjCrud.Models
         [Required(ErrorMessage = ("O campo Senha é obrigatório"))]
         public string Senha { get; set; }
         [DisplayName("Data de Nascimento")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
         [Required(ErrorMessage = ("O campo Data de Nascimento é obrigatório"))]
         public DateTime DataNascimento { get; set; }
     }

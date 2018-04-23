@@ -33,11 +33,16 @@
         </div>
     </div>
 
+ 
     <div class="form-group">
         @Html.LabelFor(model => model.Sexo, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.Sexo, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.Sexo, "", new { @class = "text-danger" })
+            <fieldset data-role="controlgroup">
+                <input type="radio" name="sexo" id="radio-choice-v-2a" value="F" @(Model.Sexo == "F" ? "checked" : string.Empty) >
+                <label for="radio-choice-v-2a">Feminino</label>
+                <input type="radio" name="sexo" id="radio-choice-v-2b" value="M" @(Model.Sexo == "M" ? "checked" : string.Empty) >
+                <label for="radio-choice-v-2b">Masculino</label>
+            </fieldset>
         </div>
     </div>
 
