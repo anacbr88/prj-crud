@@ -21,9 +21,9 @@
 		<th>
 			@Html.DisplayNameFor(model => model.Sexo)
 		</th>
-		<th>
-			Data de Nascimento
-		</th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataNascimento)
+        </th>
 		<th>
 			@Html.DisplayNameFor(model => model.Login)
 		</th>
@@ -43,7 +43,7 @@
 				@Html.DisplayFor(modelItem => item.Sexo)
 			</td>
 			<td>
-				@Html.DisplayFor(modelItem => item.DataNascimento)
+				@Html.ValueFor(modelItem => item.DataNascimento, "{0:dd/MM/yyyy}")
 			</td>
 			<td>
 				@Html.DisplayFor(modelItem => item.Login)

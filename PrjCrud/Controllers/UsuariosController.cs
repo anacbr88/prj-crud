@@ -47,7 +47,7 @@ namespace PrjCrud.Controllers
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Nome,Login,Senha,DataNascimento")] Usuario usuario)
+        public ActionResult Create([Bind(Include = "Id,Nome,Sexo,DataNascimento,Login,Senha")] Usuario usuario)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace PrjCrud.Controllers
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Nome,Login,Senha,DataNascimento")] Usuario usuario)
+        public ActionResult Edit([Bind(Include = "Id,Nome,Sexo,DataNascimento,Login,Senha")] Usuario usuario)
         {
             if (ModelState.IsValid)
             {
